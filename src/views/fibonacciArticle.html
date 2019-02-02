@@ -1,0 +1,57 @@
+<% include partials/head.html %>
+    <article>
+        <h1>Secuencia Fibonacci en JavaScript</h1>
+        <img src="img/articleImg/fibonacciSequence/principal.png" alt="image">
+        <p>La secuencia Fibonacci es una secuencia de números. Funciona de esta manera:</p>
+        <p>“Se parte de dos números iniciales, el 0 y el 1. Para sacar el número siguiente a estos dos debemos de sumar los
+        dos últimos números (0 + 1). Tendremos como resultado el número 1, y quedaríamos con una lista de números tal
+        que así ‘0, 1, 1’. Ahora, para sacar el número siguiente seguiremos los mismos pasos. Sumaremos los dos últimos
+        números de la lista (1 + 1), y tendremos como resultado el número 2. Nuestra lista quedaría conformada por los
+        números ‘0, 1, 1, 2’. Este proceso se repite las veces que sea necesario”.</p>
+        <p><b>En este artículo te explicaré como puedes codificar esta secuencia en JavaScript.</b></p>
+        <hr>
+        <p>En primer lugar vamos a hacer uso de un dato de tipo array para almacenar solamente los dos últimos números de
+            la secuencia Fibonacci. Con este array podremos hacer las operaciones de suma entre los dos únicos números que
+            hayan en el array.</p>
+        <img src="img/articleImg/fibonacciSequence/Sin título.png" alt="array">
+        <p>Luego, en una variable vamos a indicar la cantidad de números Fibonacci que queremos que aparezcan en pantalla.
+        Esto lo hago porque hasta cierto punto (al escribir más de 1475 números) los números fibonacci más grandes
+        empiezan a escribirse como un valor Infinity. Si lo deseas luego puedes hacer que estos números aparezcan
+        completos.</p>
+        <img src="img/articleImg/fibonacciSequence/quantity.png" alt="quantity">
+        <p>Como la suma se va a hacer de manera cíclica, vamos a hacer uso del ciclo for. En él declararemos la variable i,
+        que tendrá como valor inicial 0. Su condición será ‘mientras i sea menor a la variable fibonacciQuantity’. Por
+        último, su expresión de incremento será sumar más uno a la variable i.</p>
+        <img src="img/articleImg/fibonacciSequence/forCi.png" alt="for">
+        <p>Dentro del ciclo for declararemos una variable result, que tendrá como valor el resultado al sumar los dos
+        números que hayan en el array. Aquí hacemos uso de indices para indicar aquellos dos números.</p>
+        <img src="img/articleImg/fibonacciSequence/result.png" alt="result">
+        <p>Escribiremos esa variable result mediante el método document.write(). Para organizar los números fibonacci los
+        separaremos con comas, como se ve en la imagen.</p>
+        <img src="img/articleImg/fibonacciSequence/write.png" alt="writeIt">
+        <p>Por último, modificaremos nuestro array para cambiar los números que se encuentran en él. Primero eliminamos el
+        primer número fibonacci que haya en el array mediante el método splice(). Luego introducimos el nuevo número
+        fibonacci (el cual se encuentra en la variable result) al array mediante el método push().</p>
+        <img src="img/articleImg/fibonacciSequence/modify.png" alt="modifyArray">
+        <p>El código final quedaría de la siguiente manera:</p>
+        <img src="img/articleImg/fibonacciSequence/final.png" alt="finalCode">
+        <p>El resultado en un documento de tu navegador sería el siguiente:</p>
+        <img src="img/articleImg/fibonacciSequence/resultOutMod.png" alt="resultVir">
+        <p>Si lo prefieres puedes agregarle estilos al documento y poner a cada número en bloque para que sea legible.</p>
+        <img src="img/articleImg/fibonacciSequence/resultWithMod.png" alt="resultOutVir">
+        <p>Lo único que inserté fue un archivo CSS al HTML principal y modifiqué el document.write() del ciclo for.</p>
+        <img src="img/articleImg/fibonacciSequence/styles.png" alt="styleIt">
+        <img src="img/articleImg/fibonacciSequence/breakline.png" alt="breaklineAdded">
+        <p>Con esto ya hemos terminado. ¿Qué te pareció el artículo? Cualquier duda que tengas escríbeme a mi cuenta en
+            Twitter. Te responderé al instante.</p>
+        <hr>
+        <p><b>Redes:</b></p>
+        <p>
+            <ul class="contentSocial">
+                <li><a href="http://twitter.com/tiagojacu" target="_blank">Twitter</a></li>
+                <li><a href="http://github.com/tiagojacu" target="_blank">Github</a></li>
+                <li><a href="mailto:santiero12@gmail.com">E-mail</a></li>
+            </ul>
+        </p>
+    </article>
+<% include partials/foot.html %>
