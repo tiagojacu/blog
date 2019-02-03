@@ -5,7 +5,7 @@
 }
 
 body {
-    margin-top: 50px;
+    margin-top: 70px;
     background: #ebebeb;
 }
 
@@ -75,6 +75,11 @@ article {
     margin: 5px 15px;
 }
 
+.head a {
+    text-decoration: none;
+    color: white;
+}
+
 .head h1 {
     display: inline-block;
     font-size: 30px;
@@ -92,7 +97,19 @@ article {
     font-size: 150%;
 }
 
+/* WHEN THE MAX-WIDTH IS EQUAL TO 800PX */
+@media screen and (max-width: 800px){
+    .articles {
+        width: 90%;
+    }
+}
+
+/* WHEN THE MAX-WIDTH IS EQUAL TO 600PX */
 @media screen and (max-width: 600px){
+    body {
+        margin-top: 50px;
+    }
+
     .container {
         width: 100%;
         margin: 0;
